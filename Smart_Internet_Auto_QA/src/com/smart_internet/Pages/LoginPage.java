@@ -25,7 +25,7 @@ public class LoginPage
 	}
 	
 	
-
+	
 	@FindBy(how=How.XPATH,using="//a[contains(@class, 'style-scope si-page') and .//text()='Sign In']") 
 	WebElement SignInButton_Page;
 	
@@ -41,7 +41,7 @@ public class LoginPage
 	@FindBy(how=How.ID,using="sign_in")
 	WebElement signin_btn;
 	
-	
+	// Login in using Polaris Sign in link
 	public void loginPolaris(String uname, String pwd)
 	{
 		SignInButton_Polaris.click();
@@ -50,6 +50,7 @@ public class LoginPage
 		signin_btn.click();
 	}
 	
+	// Login in using SI page Sign in button
 	public void loginPage(String uname,String pwd)
 	
 	{

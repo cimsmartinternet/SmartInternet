@@ -20,7 +20,7 @@ public class BrowserActions
 {
 	static WebDriver driver;
 	
-	
+	//method for selecting and initiating the browser
 	public static WebDriver startBrowser(String browsername)
 	{
 		ConfigReader config=new ConfigReader();

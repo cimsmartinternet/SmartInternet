@@ -27,6 +27,7 @@ public class VerifyUserLogin
 	WebDriver driver;
 	ConfigReader config=new ConfigReader();
 	
+	// Test to validate the sign in action via sign in button on the page
 	public void Usrlogin_page()
 	{
 	
@@ -38,6 +39,7 @@ public class VerifyUserLogin
 	driver.close();
 	}
 	
+	// Test to validate the sign in action via sign in link on the polaris
 	public void userlogin_Polaris()
 	{
 		
