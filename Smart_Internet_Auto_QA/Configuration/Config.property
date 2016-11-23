@@ -11,7 +11,7 @@ IEPath=D:\\Selenium\\IEDriverServer.exe
 
 *****************************************URL's**********************************************
 
-SIapplicationURL=https://internet.staging.xfinity.com/
+SIapplicationURL=https://internet.xfinity.com/
 
 SIstagingURL=https://internet.staging.xfinity.com/
 

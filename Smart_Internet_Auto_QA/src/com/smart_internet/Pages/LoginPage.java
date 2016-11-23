@@ -26,10 +26,10 @@ public class LoginPage
 	
 	
 
-	@FindBy(how=How.XPATH,using="html/body/si-page-login/si-front-door/div[1]/div[1]/a") 
+	@FindBy(how=How.XPATH,using="//a[contains(@class, 'style-scope si-page') and .//text()='Sign In']") 
 	WebElement SignInButton_Page;
 	
-	@FindBy(how=How.XPATH,using=".//*[@id='polaris-header']/div/ul[2]/li[7]/a")
+	@FindBy(how=How.XPATH,using="//a[contains(@class, 'polaris-link') and .//text()='Sign In']")
 	WebElement SignInButton_Polaris;
 	
 	@FindBy(how=How.ID,using="user") 
@@ -44,7 +44,7 @@ public class LoginPage
 	
 	public void loginPolaris(String uname, String pwd)
 	{
-		SignInButton_Page.click();
+		SignInButton_Polaris.click();
 		uname_field.sendKeys(uname);
 		password_field.sendKeys(pwd);
 		signin_btn.click();
@@ -53,7 +53,7 @@ public class LoginPage
 	public void loginPage(String uname,String pwd)
 	
 	{
-		SignInButton_Polaris.click();
+		SignInButton_Page.click();
 		uname_field.sendKeys(uname);
 		password_field.sendKeys(pwd);
 		signin_btn.click();

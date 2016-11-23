@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.smart_internet.Test_cases.VerifyUserLogin_Page">
+      <class name="com.smart_internet.Test_cases.VerifyUserLogin">
         <methods>
-          <include name="Usrlogin_page"/>
+          <include name="userlogin_Polaris"/>
         </methods>
-      </class> <!-- com.smart_internet.Test_cases.VerifyUserLogin_Page -->
+      </class> <!-- com.smart_internet.Test_cases.VerifyUserLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

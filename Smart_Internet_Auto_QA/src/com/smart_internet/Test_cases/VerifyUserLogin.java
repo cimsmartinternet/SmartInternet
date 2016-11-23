@@ -30,7 +30,7 @@ public class VerifyUserLogin
 	public void Usrlogin_page()
 	{
 	
-	driver=BrowserActions.startBrowser("chrome");//,config.getApplicationURL());
+	driver=BrowserActions.startBrowser("chrome");
 	driver.get(config.getApplicationURL());
 	LoginPage login_page=PageFactory.initElements(driver, LoginPage.class);
 	login_page.loginPage(config.getPrimaryUname(),config.getPrimaryPwd());
@@ -41,7 +41,7 @@ public class VerifyUserLogin
 	public void userlogin_Polaris()
 	{
 		
-		WebDriver driver=BrowserActions.startBrowser("chrome");
+		driver=BrowserActions.startBrowser("chrome");
 		driver.get(config.getApplicationURL());
 		LoginPage login_page=PageFactory.initElements(driver, LoginPage.class);
 		login_page.loginPolaris(config.getPrimaryUname(),config.getPrimaryPwd());
