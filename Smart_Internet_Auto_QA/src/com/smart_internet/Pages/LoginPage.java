@@ -1,5 +1,6 @@
 /**
  * 
+ * 
  */
 package com.smart_internet.Pages;
 
@@ -7,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
+
 
 /**
  * @author 266963
@@ -18,6 +21,7 @@ public class LoginPage
 
 {
 	WebDriver driver;
+	
 	
 	public LoginPage(WebDriver ldriver)
 	{
@@ -58,7 +62,7 @@ public class LoginPage
 		uname_field.sendKeys(uname);
 		password_field.sendKeys(pwd);
 		signin_btn.click();
-		
+				
 		
 	}
 	

@@ -13,6 +13,7 @@ import Utility.ConfigReader;
 
 
 
+
 /**
  * @author 266963
  * 
@@ -26,6 +27,7 @@ public class VerifyUserLogin
 {
 	WebDriver driver;
 	ConfigReader config=new ConfigReader();
+	
 	
 	// Test to validate the sign in action via sign in button on the page
 	public void Usrlogin_page()
