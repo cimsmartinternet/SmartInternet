@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Utility;
+package Libraries;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,7 +15,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
  *  This will invoke the browsers according to users preference 
  *
  */
-public class BrowserActions 
+public class Utitlities 
 
 {
 	static WebDriver driver;

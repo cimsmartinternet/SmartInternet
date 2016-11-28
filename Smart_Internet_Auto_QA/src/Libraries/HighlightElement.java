@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Utility;
+package Libraries;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

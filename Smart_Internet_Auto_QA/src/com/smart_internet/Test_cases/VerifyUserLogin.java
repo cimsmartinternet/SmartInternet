@@ -8,8 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.smart_internet.Pages.LoginPage;
-import Utility.BrowserActions;
-import Utility.ConfigReader;
+
+import Libraries.Utitlities;
+import Libraries.ConfigReader;
 
 
 
@@ -33,7 +34,7 @@ public class VerifyUserLogin
 	public void Usrlogin_page()
 	{
 	
-	driver=BrowserActions.startBrowser("chrome");
+	driver=Utitlities.startBrowser("chrome");
 	driver.get(config.getApplicationURL());
 	LoginPage login_page=PageFactory.initElements(driver, LoginPage.class);
 	login_page.loginPage(config.getPrimaryUname(),config.getPrimaryPwd());
@@ -45,7 +46,7 @@ public class VerifyUserLogin
 	public void userlogin_Polaris()
 	{
 		
-		driver=BrowserActions.startBrowser("chrome");
+		driver=Utitlities.startBrowser("chrome");
 		driver.get(config.getApplicationURL());
 		LoginPage login_page=PageFactory.initElements(driver, LoginPage.class);
 		login_page.loginPolaris(config.getPrimaryUname(),config.getPrimaryPwd());

@@ -25,3 +25,11 @@ SIproductionURL=https://internet.xfinity.com/
 PrimaryUname=cim_si_demo_103
 
 PrimaryPwd=sidemo103
+
+StagingUname=cim_si_staging_02
+
+StagingPwd=december02
+
+WrongUname=cimts1
+
+WrongPwd=1234

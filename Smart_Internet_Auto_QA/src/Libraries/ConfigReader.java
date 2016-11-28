@@ -1,8 +1,16 @@
-package Utility;
+package Libraries;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
+
+
+/**
+ * @author 266963
+ * 
+ *  This class contains method to access the congig file 
+ *
+ */
 
 public class ConfigReader 
 {
@@ -65,7 +73,7 @@ public class ConfigReader
 		return url;
 	}
 	
-	//method to get the primary username
+	//method to get the primary user name
 	public String getPrimaryUname()
 	{
 		String uname=pro.getProperty("PrimaryUname");
@@ -76,6 +84,34 @@ public class ConfigReader
 	public String getPrimaryPwd()
 	{
 		String pwd=pro.getProperty("PrimaryPwd");
+		return pwd;
+	}
+	
+	//method to get the Wrong user name
+	public String getWrongUname()
+	{
+		String uname=pro.getProperty("WrongUname");
+		return uname;
+	}
+		
+	//method to get the Wrong password
+	public String getWrongPwd()
+	{
+		String pwd=pro.getProperty("WrongPwd");
+		return pwd;
+	}
+		
+	//method to get the Staging user name
+	public String getStgUname()
+	{
+		String uname=pro.getProperty("StagingUname");
+		return uname;
+	}
+				
+	//method to get the Staging password
+	public String getStgPwd()
+	{
+		String pwd=pro.getProperty("StagingPwd");
 		return pwd;
 	}
 	
