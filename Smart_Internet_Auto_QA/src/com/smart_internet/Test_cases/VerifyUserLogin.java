@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import com.smart_internet.Pages.LoginPage;
 
-import Libraries.Utitlities;
+import Libraries.Utilities;
 import Libraries.ConfigReader;
 
 
@@ -28,13 +28,14 @@ public class VerifyUserLogin
 {
 	WebDriver driver;
 	ConfigReader config=new ConfigReader();
+	LoginPage ele;
 	
 	
 	// Test to validate the sign in action via sign in button on the page
 	public void Usrlogin_page()
 	{
 	
-	driver=Utitlities.startBrowser("chrome");
+	driver=Utilities.startBrowser("chrome");
 	driver.get(config.getApplicationURL());
 	LoginPage login_page=PageFactory.initElements(driver, LoginPage.class);
 	login_page.loginPage(config.getPrimaryUname(),config.getPrimaryPwd());
@@ -46,7 +47,7 @@ public class VerifyUserLogin
 	public void userlogin_Polaris()
 	{
 		
-		driver=Utitlities.startBrowser("chrome");
+		driver=Utilities.startBrowser("chrome");
 		driver.get(config.getApplicationURL());
 		LoginPage login_page=PageFactory.initElements(driver, LoginPage.class);
 		login_page.loginPolaris(config.getPrimaryUname(),config.getPrimaryPwd());

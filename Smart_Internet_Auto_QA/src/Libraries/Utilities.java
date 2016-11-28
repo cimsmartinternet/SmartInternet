@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.BeforeTest;
 
 
 /**
@@ -17,12 +19,13 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
  *  This will have most common used methods
  *
  */
-public class Utitlities 
+public class Utilities 
 
 {
 	static WebDriver driver;
 	
 	//method for selecting and initiating the browser
+	@BeforeTest
 	public static WebDriver startBrowser(String browsername)
 	{
 		ConfigReader config=new ConfigReader();
@@ -48,7 +51,7 @@ public class Utitlities
 	}
 	
 	//method for highlighting an element
-	public static void highLightElement(WebDriver driver, WebElement element)
+	public static WebDriver highLightElement(WebDriver driver, WebElement element)
 	{
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].setAttribute('style','background: yellow; border: 2px solid red;');", element);
@@ -61,8 +64,17 @@ public class Utitlities
 			System.out.println(e.getMessage());
 		}
 		js.executeScript("arguments[0].setAttribute('style', border:  solid 2px white;');", element);
+		return driver;
 	}
 	
+	//method to mouse hover on an element
 	
+	public static WebDriver mouseHover(WebDriver driver, WebElement element)
+	{
+		Actions act=new Actions(driver);
+		act.moveToElement(element).perform();
+		return driver;
+		
+	}	
 		
 }
