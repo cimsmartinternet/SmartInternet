@@ -3,7 +3,9 @@
  */
 package Libraries;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -12,7 +14,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 /**
  * @author 266963
  * 
- *  This will invoke the browsers according to users preference 
+ *  This will have most common used methods
  *
  */
 public class Utitlities 
@@ -43,6 +45,22 @@ public class Utitlities
 		driver.manage().window().maximize();
 		return driver;
 		
+	}
+	
+	//method for highlighting an element
+	public static void highLightElement(WebDriver driver, WebElement element)
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].setAttribute('style','background: yellow; border: 2px solid red;');", element);
+		try
+		{
+			Thread.sleep(500);
+		}
+		catch(InterruptedException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		js.executeScript("arguments[0].setAttribute('style', border:  solid 2px white;');", element);
 	}
 	
 	
