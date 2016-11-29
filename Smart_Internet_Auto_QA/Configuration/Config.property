@@ -1,11 +1,11 @@
 
 *****************************************PATH**********************************************
 
-ChromePath=D:\\Selenium\\chromedriver.exe
+ChromePath=C:\\Users\\266963\\git\\Local_Smart_Internet_Auto_QA\\Smart_Internet_Auto_QA\\Drivers\\chromedriver.exe
 
-FirefoxPath=D:\\Selenium\geckodriver.exe
+FirefoxPath=C:\\Users\\266963\\git\\Local_Smart_Internet_Auto_QA\\Smart_Internet_Auto_QA\\Drivers\\geckodriver.exe
 
-IEPath=D:\\Selenium\\IEDriverServer.exe
+IEPath=C:\\Users\\266963\\git\\Local_Smart_Internet_Auto_QA\\Smart_Internet_Auto_QA\\Drivers\\IEDriverServer.exe
 
 
 
