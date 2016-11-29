@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="71480" started-at="2016-11-29T11:10:16Z" finished-at="2016-11-29T11:11:28Z">
+  <suite name="Suite" duration-ms="64322" started-at="2016-11-29T12:03:47Z" finished-at="2016-11-29T12:04:51Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="71480" started-at="2016-11-29T11:10:16Z" finished-at="2016-11-29T11:11:28Z">
+    <test name="Test" duration-ms="64322" started-at="2016-11-29T12:03:47Z" finished-at="2016-11-29T12:04:51Z">
       <class name="com.smart_internet.Test_cases.VerifyUserLogin">
-        <test-method status="FAIL" signature="Usrlogin_page()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@13f2bb1]" name="Usrlogin_page" duration-ms="20494" started-at="2016-11-29T16:40:16Z" finished-at="2016-11-29T16:40:37Z">
+        <test-method status="FAIL" signature="Usrlogin_page()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@18a00e3]" name="Usrlogin_page" duration-ms="20208" started-at="2016-11-29T17:33:47Z" finished-at="2016-11-29T17:34:07Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
@@ -17,7 +17,7 @@
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 	expected [Your WiF - XFINITY Internet] but found [Your WiFi - XFINITY Internet]
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-	at com.smart_internet.Test_cases.VerifyUserLogin.Usrlogin_page(VerifyUserLogin.java:57)
+	at com.smart_internet.Test_cases.VerifyUserLogin.Usrlogin_page(VerifyUserLogin.java:63)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -49,41 +49,41 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Usrlogin_page -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@13f2bb1]" name="tearDown" is-config="true" duration-ms="5467" started-at="2016-11-29T16:40:37Z" finished-at="2016-11-29T16:40:42Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@18a00e3]" name="tearDown" is-config="true" duration-ms="7612" started-at="2016-11-29T17:34:07Z" finished-at="2016-11-29T17:34:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Usrlogin_page status=FAILURE method=VerifyUserLogin.Usrlogin_page()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@13f2bb1] output={null}]]]>
+                <![CDATA[[TestResult name=Usrlogin_page status=FAILURE method=VerifyUserLogin.Usrlogin_page()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@18a00e3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="userlogin_Polaris()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@13f2bb1]" name="userlogin_Polaris" duration-ms="16651" started-at="2016-11-29T16:40:42Z" finished-at="2016-11-29T16:40:59Z">
+        <test-method status="PASS" signature="userlogin_Polaris()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@18a00e3]" name="userlogin_Polaris" duration-ms="18219" started-at="2016-11-29T17:34:14Z" finished-at="2016-11-29T17:34:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userlogin_Polaris -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@13f2bb1]" name="tearDown" is-config="true" duration-ms="2200" started-at="2016-11-29T16:40:59Z" finished-at="2016-11-29T16:41:01Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@18a00e3]" name="tearDown" is-config="true" duration-ms="243" started-at="2016-11-29T17:34:33Z" finished-at="2016-11-29T17:34:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=userlogin_Polaris status=SUCCESS method=VerifyUserLogin.userlogin_Polaris()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@13f2bb1] output={null}]]]>
+                <![CDATA[[TestResult name=userlogin_Polaris status=SUCCESS method=VerifyUserLogin.userlogin_Polaris()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@18a00e3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="userlogin_negetiveScenario()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@13f2bb1]" name="userlogin_negetiveScenario" duration-ms="21962" started-at="2016-11-29T16:41:01Z" finished-at="2016-11-29T16:41:23Z">
+        <test-method status="PASS" signature="userlogin_negetiveScenario()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@18a00e3]" name="userlogin_negetiveScenario" duration-ms="15688" started-at="2016-11-29T17:34:33Z" finished-at="2016-11-29T17:34:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userlogin_negetiveScenario -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@13f2bb1]" name="tearDown" is-config="true" duration-ms="4665" started-at="2016-11-29T16:41:23Z" finished-at="2016-11-29T16:41:28Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@18a00e3]" name="tearDown" is-config="true" duration-ms="2322" started-at="2016-11-29T17:34:49Z" finished-at="2016-11-29T17:34:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=userlogin_negetiveScenario status=SUCCESS method=VerifyUserLogin.userlogin_negetiveScenario()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@13f2bb1] output={null}]]]>
+                <![CDATA[[TestResult name=userlogin_negetiveScenario status=SUCCESS method=VerifyUserLogin.userlogin_negetiveScenario()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@18a00e3] output={null}]]]>
               </value>
             </param>
           </params>
