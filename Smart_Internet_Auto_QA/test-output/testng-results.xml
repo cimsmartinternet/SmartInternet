@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="52846" started-at="2016-11-28T11:22:37Z" finished-at="2016-11-28T11:23:30Z">
+  <suite name="Suite" duration-ms="66529" started-at="2016-11-29T09:14:38Z" finished-at="2016-11-29T09:15:45Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="52846" started-at="2016-11-28T11:22:37Z" finished-at="2016-11-28T11:23:30Z">
+    <test name="Test" duration-ms="66529" started-at="2016-11-29T09:14:38Z" finished-at="2016-11-29T09:15:45Z">
       <class name="com.smart_internet.Test_cases.VerifyUserLogin">
-        <test-method status="PASS" signature="Usrlogin_page()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@76ae34]" name="Usrlogin_page" duration-ms="33113" started-at="2016-11-28T16:52:37Z" finished-at="2016-11-28T16:53:11Z">
+        <test-method status="PASS" signature="Usrlogin_page()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@174d20a]" name="Usrlogin_page" duration-ms="22846" started-at="2016-11-29T14:44:38Z" finished-at="2016-11-29T14:45:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Usrlogin_page -->
-        <test-method status="PASS" signature="userlogin_Polaris()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@76ae34]" name="userlogin_Polaris" duration-ms="19580" started-at="2016-11-28T16:53:11Z" finished-at="2016-11-28T16:53:30Z">
+        <test-method status="PASS" signature="userlogin_Polaris()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@174d20a]" name="userlogin_Polaris" duration-ms="20502" started-at="2016-11-29T14:45:01Z" finished-at="2016-11-29T14:45:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userlogin_Polaris -->
+        <test-method status="PASS" signature="userlogin_negetiveScenario()[pri:0, instance:com.smart_internet.Test_cases.VerifyUserLogin@174d20a]" name="userlogin_negetiveScenario" duration-ms="23150" started-at="2016-11-29T14:45:21Z" finished-at="2016-11-29T14:45:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userlogin_negetiveScenario -->
       </class> <!-- com.smart_internet.Test_cases.VerifyUserLogin -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

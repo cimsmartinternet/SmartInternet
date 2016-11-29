@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import Libraries.Utilities;
+
 
 
 /**
@@ -48,6 +50,7 @@ public class LoginPage
 	// Login in using Polaris Sign in link
 	public void loginPolaris(String uname, String pwd)
 	{
+		//Utilities.highLightElement(driver,SignInButton_Polaris);
 		SignInButton_Polaris.click();
 		uname_field.sendKeys(uname);
 		password_field.sendKeys(pwd);
@@ -58,6 +61,7 @@ public class LoginPage
 	public void loginPage(String uname,String pwd)
 	
 	{
+		//Utilities.highLightElement(driver,SignInButton_Page);
 		SignInButton_Page.click();
 		uname_field.sendKeys(uname);
 		password_field.sendKeys(pwd);
