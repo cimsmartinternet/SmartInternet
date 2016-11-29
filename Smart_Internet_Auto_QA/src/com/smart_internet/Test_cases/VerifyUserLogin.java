@@ -59,7 +59,7 @@ public class VerifyUserLogin
 	login_page.loginPage(config.getPrimaryUname(),config.getPrimaryPwd());
 	String actual=driver.getTitle();
 	assertion=new SoftAssert();
-	assertion.assertEquals(actual, "Your WiF - XFINITY Internet");
+	assertion.assertEquals(actual, "Your WiFi - XFINITY Internet");
 	assertion.assertAll();
 	System.out.println("********************Sign in is successful from the page*****************");
 	
