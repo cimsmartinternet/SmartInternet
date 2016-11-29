@@ -7,7 +7,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.smart_internet.Pages.LoginPage;
 
@@ -33,40 +37,43 @@ public class VerifyUserLogin
 	
 
 	RemoteWebDriver driver;
+	SoftAssert assertion;
 	ConfigReader config=new ConfigReader();
 	LoginPage ele;
 	
 	
 	// Test to validate the sign in action via sign in button on the page
 	@Test
-	public void Usrlogin_page() throws InterruptedException
+	public void Usrlogin_page() 
 	{
 	
 	driver=Utilities.startBrowser("chrome");
 	driver.get(config.getApplicationURL());
 	LoginPage login_page=PageFactory.initElements(driver, LoginPage.class);
 	login_page.loginPage(config.getPrimaryUname(),config.getPrimaryPwd());
-	Thread.sleep(500);
 	String actual=driver.getTitle();
-	Assert.assertEquals(actual, "Your WiFi - XFINITY Internet");
+	assertion=new SoftAssert();
+	assertion.assertEquals(actual, "Your WiFi - XFINITY Internet");
+	assertion.assertAll();
 	System.out.println("********************Sign in is successful from the page*****************");
-	driver.close();
+	
 	}
 	
 	// Test to validate the sign in action via sign in link on the polaris
 	@Test
-	public void userlogin_Polaris() throws InterruptedException
+	public void userlogin_Polaris() 
 	{
 		
 		driver=Utilities.startBrowser("chrome");
 		driver.get(config.getApplicationURL());
 		LoginPage login_page=PageFactory.initElements(driver, LoginPage.class);
 		login_page.loginPolaris(config.getPrimaryUname(),config.getPrimaryPwd());
-		Thread.sleep(500);
 		String actual=driver.getTitle();
-		Assert.assertEquals(actual, "Your WiFi - XFINITY Internet");
+		assertion=new SoftAssert();
+		assertion.assertEquals(actual, "Your WiFi - XFINITY Internet");
+		assertion.assertAll();
 		System.out.println("********************Sign in is successful from Polaris*****************");
-		driver.close();
+		
 	}
 	
 	// Test to validate the sign in action with a wrong user name/password
@@ -81,6 +88,22 @@ public class VerifyUserLogin
 		String msg=driver.findElementByXPath("//p[@class='error_message']").getText();
 		Assert.assertEquals(msg, "The username and password entered do not match. Please try again.");
 		System.out.println("********************Sign in unsuccessful with wrong user name/password, scenario passed*****************");
-		driver.close();
+		
+	}
+	
+	// Method to close the browser after each test
+	@AfterMethod
+	public void tearDown(ITestResult result) throws InterruptedException
+	{
+		if(result.getStatus()==ITestResult.FAILURE)
+		{
+			Thread.sleep(5000);
+			String screenshot_path=Utilities.captureScreenshots(driver, result.getName());
+			driver.close();
+		}
+		else
+		{
+			driver.close();
+		}
 	}
 }

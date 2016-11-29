@@ -3,9 +3,13 @@
  */
 package Libraries;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,7 +17,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.BeforeTest;
+
 
 
 /**
@@ -28,7 +32,7 @@ public class Utilities
 	static RemoteWebDriver driver;
 	
 	//method for selecting and initiating the browser
-	@BeforeTest
+	
 	public static RemoteWebDriver startBrowser(String browsername)
 	{
 		ConfigReader config=new ConfigReader();
@@ -83,4 +87,24 @@ public class Utilities
 		
 	}	
 		
+	//method to take screenshots
+	
+	public static String captureScreenshots(RemoteWebDriver driver, String screenshotname)
+	{
+		try {
+			TakesScreenshot ts=(TakesScreenshot)driver;
+			File source=ts.getScreenshotAs(OutputType.FILE);
+			String dest="C:\\Users\\266963\\git\\Local_Smart_Internet_Auto_QA\\Smart_Internet_Auto_QA\\Screenshots\\"+screenshotname+".png";
+			File destination=new File(dest);
+			FileUtils.copyFile(source, destination);
+			System.out.println("Screenshot taken");
+			return dest;
+			} 
+		catch (Exception e) 
+			{
+			System.out.println("Exception while taking screenshot"+e.getMessage());
+			return e.getMessage();
+			} 
+			
+	}	
 }

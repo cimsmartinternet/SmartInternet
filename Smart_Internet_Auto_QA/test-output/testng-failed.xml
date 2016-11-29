@@ -6,7 +6,7 @@
       <class name="com.smart_internet.Test_cases.VerifyUserLogin">
         <methods>
           <include name="Usrlogin_page"/>
-          <include name="userlogin_Polaris"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.smart_internet.Test_cases.VerifyUserLogin -->
     </classes>
