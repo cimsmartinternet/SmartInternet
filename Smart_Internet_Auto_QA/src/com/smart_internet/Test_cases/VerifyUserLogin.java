@@ -12,9 +12,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+//import com.relevantcodes.extentreports.ExtentReports;
+//import com.relevantcodes.extentreports.ExtentTest;
+// com.relevantcodes.extentreports.LogStatus;
 import com.smart_internet.Pages.LoginPage;
 
 import Libraries.Utilities;
@@ -37,8 +37,8 @@ public class VerifyUserLogin
 
 {
 	
-	ExtentReports report;
-	ExtentTest logger;
+	//ExtentReports report;
+	//ExtentTest logger;
 	RemoteWebDriver driver;
 	SoftAssert assertion;
 	ConfigReader config;
@@ -108,15 +108,16 @@ public class VerifyUserLogin
 		if(result.getStatus()==ITestResult.FAILURE)
 		{
 			Thread.sleep(5000);
-			String screenshot_path=Utilities.captureScreenshots(driver, result.getName());
-			String img=logger.addScreenCapture(screenshot_path);
-			logger.log(LogStatus.FAIL, "Usrlogin_page", img);
+			//String screenshot_path=
+			Utilities.captureScreenshots(driver, result.getName());
+			//String img=logger.addScreenCapture(screenshot_path);
+			//logger.log(LogStatus.FAIL, "Usrlogin_page", img);
 			driver.close();
 		}
 		else
 		{
-			report.endTest(logger);
-			report.flush();
+			//report.endTest(logger);
+			//report.flush();
 			driver.close();
 		}
 	}

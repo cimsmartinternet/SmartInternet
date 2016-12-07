@@ -61,7 +61,7 @@ public class Utilities
 	//method for highlighting an element
 	public static void highLightElement(RemoteWebDriver driver,WebElement element)
 	{
-		JavascriptExecutor js=(JavascriptExecutor)driver;
+		JavascriptExecutor js=driver;
 		js.executeScript("arguments[0].setAttribute('style','background: yellow; border: 2px solid red;');", element);
 		try
 		{
@@ -92,7 +92,7 @@ public class Utilities
 	public static String captureScreenshots(RemoteWebDriver driver, String screenshotname)
 	{
 		try {
-			TakesScreenshot ts=(TakesScreenshot)driver;
+			TakesScreenshot ts=driver;
 			File source=ts.getScreenshotAs(OutputType.FILE);
 			String dest="C:\\Users\\266963\\git\\Local_Smart_Internet_Auto_QA\\Smart_Internet_Auto_QA\\Screenshots\\"+screenshotname+".png";
 			File destination=new File(dest);
