@@ -4,9 +4,11 @@
 package Libraries;
 
 import java.io.File;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -17,6 +19,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 
 
@@ -107,4 +110,45 @@ public class Utilities
 			} 
 			
 	}	
+	
+	//method to take text box
+	public void TextBox (String element, String text) throws Exception
+	{
+		WebElement text2 = driver.findElementById(element);	
+		text2.sendKeys(text);
+		System.out.println(element);	
+	}
+	
+	//method to take dropdown
+	public void Dropdown (String str1, String str2)
+	{
+		WebElement dropdown1 = driver.findElementByName(str1);
+		Select se = new Select(dropdown1);
+		se.selectByVisibleText(str2);
+		List<WebElement>sele =driver.findElementsByTagName("a");
+		System.out.println(sele.size());
+		for(int i=0;i<sele.size();i++)
+		{
+			System.out.println(sele.get(i).getText());
+		}
+		
+	}
+	
+	//method to take radio button
+	public void radio (String rad)
+	{
+		Boolean state;
+		WebElement radio = driver.findElement(By.id(rad));
+		state = radio.isSelected();
+		System.out.println(state);
+		radio.click();
+		
+	}
+	
+	//method to take check box
+	public void checkbox (String chk)
+	{
+		WebElement chkbx = driver.findElement(By.id(chk));
+		chkbx.click();
+	}
 }
