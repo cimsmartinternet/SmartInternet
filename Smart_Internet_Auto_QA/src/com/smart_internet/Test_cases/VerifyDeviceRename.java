@@ -38,9 +38,8 @@ public class VerifyDeviceRename
 		Devices dev=PageFactory.initElements(driver, Devices.class);
 		Thread.sleep(10000);
 		dev.VerifyDeviceRename();
-		//System.out.println(Devices_Tab.getText());
-		//driver.findElementByXPath(Devices_Tab).click();
-		//Thread.sleep(1000);*/
+		
+	
 	}
 	
 	

@@ -5,8 +5,8 @@
   
   
   <classes>
-  <class name="com.smart_internet.Test_cases.VerifyUserLogin"/>
-
+ <!--<class name="com.smart_internet.Test_cases.VerifyUserLogin"/>-->
+ <class name="com.smart_internet.Test_cases.VerifyDeviceRename"/>
   </classes>
   
   </test> <!-- Test -->
