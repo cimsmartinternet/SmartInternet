@@ -6,6 +6,7 @@
   
   <classes>
   <class name="com.smart_internet.Test_cases.VerifyUserLogin"/>
+
   </classes>
   
   </test> <!-- Test -->
