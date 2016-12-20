@@ -11,7 +11,7 @@ IEPath=C:\Users\\266963\\git\\SmartInternet\\Smart_Internet_Auto_QA\\Drivers\\IE
 
 *****************************************URL's**********************************************
 
-SIapplicationURL=https://internet.xfinity.com/
+SIapplicationURL=https://internet.staging.xfinity.com/
 
 SIstagingURL=https://internet.staging.xfinity.com/
 
@@ -33,3 +33,7 @@ StagingPwd=december02
 WrongUname=cimts1
 
 WrongPwd=1234
+
+*******************************************Browser**************************************************
+
+Browser=chrome

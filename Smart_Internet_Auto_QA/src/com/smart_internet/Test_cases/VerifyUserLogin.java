@@ -42,7 +42,7 @@ public class VerifyUserLogin
 	RemoteWebDriver driver;
 	SoftAssert assertion;
 	ConfigReader config;
-	LoginPage ele;
+	
 	
 	
 	// Test to validate the sign in action via sign in button on the page
@@ -53,7 +53,7 @@ public class VerifyUserLogin
 	/*report=new ExtentReports("C:\\Users\\266963\\git\\Local_Smart_Internet_Auto_QA\\Smart_Internet_Auto_QA\\Reports\\Login.html");
 	logger=report.startTest("Usrlogin_page");*/
 	config=new ConfigReader();
-	driver=Utilities.startBrowser("chrome");
+	driver=Utilities.startBrowser(config.getBrowser());
 	driver.get(config.getApplicationURL());
 	LoginPage login_page=PageFactory.initElements(driver, LoginPage.class);
 	login_page.loginPage(config.getPrimaryUname(),config.getPrimaryPwd());
@@ -72,7 +72,7 @@ public class VerifyUserLogin
 		/*report=new ExtentReports("C:\\Users\\266963\\git\\Local_Smart_Internet_Auto_QA\\Smart_Internet_Auto_QA\\Reports\\Usrlogin_page.html");
 		logger=report.startTest("userlogin_Polaris");*/
 		config=new ConfigReader();
-		driver=Utilities.startBrowser("chrome");
+		driver=Utilities.startBrowser(config.getBrowser());
 		driver.get(config.getApplicationURL());
 		LoginPage login_page=PageFactory.initElements(driver, LoginPage.class);
 		login_page.loginPolaris(config.getPrimaryUname(),config.getPrimaryPwd());
@@ -91,7 +91,7 @@ public class VerifyUserLogin
 		/*report=new ExtentReports("C:\\Users\\266963\\git\\Local_Smart_Internet_Auto_QA\\Smart_Internet_Auto_QA\\Reports\\Usrlogin_page.html");
 		logger=report.startTest("userlogin_negetiveScenario");*/
 		config=new ConfigReader();
-		driver=Utilities.startBrowser("chrome");
+		driver=Utilities.startBrowser(config.getBrowser());
 		driver.get(config.getApplicationURL());
 		LoginPage login_page=PageFactory.initElements(driver, LoginPage.class);
 		login_page.loginPolaris(config.getWrongUname(),config.getWrongPwd());

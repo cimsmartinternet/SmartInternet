@@ -115,4 +115,11 @@ public class ConfigReader
 		return pwd;
 	}
 	
+	//method to get the browser 
+	public String getBrowser()
+	{
+		String browser=pro.getProperty("Browser");
+		return browser;
+	}
+	
 }
